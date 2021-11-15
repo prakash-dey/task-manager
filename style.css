@@ -1,3 +1,17 @@
+
+:root{
+    --modal-height: 50vh;
+    --modal-width: 45vw;
+}
+
+
+
+
+
+
+
+
+/* ===================css reset==================== */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -66,7 +80,7 @@ body{
 }
 .priority-container{
     background-color: lightpink;
-    padding: 0 0.5em;
+    padding: .5em;
     height: 4rem;
     width: 40%;
     cursor: pointer;
@@ -83,15 +97,35 @@ body{
 .high-priority{
     background-color: red;
     height: 3rem;
-    width: 30%;
+    width: 24%;
 }
 .medium-priority{
     background-color: yellow;
     height: 3rem;
-    width: 30%;
+    width: 24%;
 }
 .low-priority{
     background-color: blue;
     height: 3rem;
-    width: 30%;
+    width: 24%;
+}
+.no-priority{
+    background-color: black;
+    height: 3rem;
+    width: 24%;
+}
+.priority-container>*{
+    margin-left: 0.5em;
+    border-radius: 8px;
+}
+
+
+/* ==================modal=============== */
+.task-modal{
+    background-color: lightgreen;
+    height: var(--modal-height);
+    width: var(--modal-width);
+    position: absolute;
+    top: calc((100vh - var(--modal-height))/2);
+    left: calc((100vw - var(--modal-width))/2);
 }
