@@ -1,0 +1,97 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ==============General======================= */
+body{
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ============header=================== */
+
+.header{
+    background-color: lightblue;
+    padding: .5em 0;
+}
+.priority-container{
+    background-color: lightpink;
+    padding: 0 0.5em;
+    height: 4rem;
+    width: 40%;
+    cursor: pointer;
+
+}
+.task-button{
+    padding: 1em;
+    width: 100%;
+    font-size: 1rem;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+}
+.high-priority{
+    background-color: red;
+    height: 3rem;
+    width: 30%;
+}
+.medium-priority{
+    background-color: yellow;
+    height: 3rem;
+    width: 30%;
+}
+.low-priority{
+    background-color: blue;
+    height: 3rem;
+    width: 30%;
+}
