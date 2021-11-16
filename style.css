@@ -128,4 +128,46 @@ body{
     position: absolute;
     top: calc((100vh - var(--modal-height))/2);
     left: calc((100vw - var(--modal-width))/2);
+    overflow: hidden;
+}
+.text-area{
+    height: 100%;
+    width: 70%;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: lightblue;
+}
+.priority-colors{
+    background-color: chartreuse;
+    height: 100%;
+    width: 30%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center ;
+    margin: .5em 0;
+}
+.priority-colors>*{
+    cursor: pointer;
+
+}
+.high-priority-small{
+    background-color: red;
+    height: 15%;
+    width: 50%;
+}
+.medium-priority-small{
+    background-color: yellow;
+    height: 15%;
+    width: 50%;
+}
+.low-priority-small{
+    background-color: blue;
+    height: 15%;
+    width: 50%;
+}
+.no-priority-small{
+    background-color: black;
+    height: 15%;
+    width: 50%;
 }
