@@ -57,10 +57,13 @@ table {
 }
 
 /* ==============General======================= */
-body{
+* {
     box-sizing: border-box;
+    
 }
-
+body{
+    font-family: 'Poppins', sans-serif;
+}
 .container{
     max-width: 1080px;
     margin: 0 auto;
@@ -122,13 +125,11 @@ body{
 
 /* ==================modal=============== */
 .task-modal{
-    background-color: lightgreen;
     height: var(--modal-height);
     width: var(--modal-width);
     position: absolute;
     top: calc((100vh - var(--modal-height))/2);
     left: calc((100vw - var(--modal-width))/2);
-    overflow: hidden;
 }
 .text-area{
     height: 100%;
@@ -137,6 +138,8 @@ body{
     border: none;
     outline: none;
     background-color: lightblue;
+    padding: 2em;
+    font-size: 1.5rem;
 }
 .priority-colors{
     background-color: chartreuse;
@@ -145,7 +148,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-content: center ;
-    margin: .5em 0;
+    position: relative;
 }
 .priority-colors>*{
     cursor: pointer;
@@ -170,4 +173,10 @@ body{
     background-color: black;
     height: 15%;
     width: 50%;
+}
+.cancel-btn{
+    position: absolute;
+    top: 0.2em;
+    right: 0.2em;
+    font-size: 1.2rem;
 }
