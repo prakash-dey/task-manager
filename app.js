@@ -17,3 +17,4 @@ taskBtn.addEventListener("click", (e) => {
 cancelBtn.addEventListener("click",(e)=>{
     modalCont.style.display = "none";
 })
+

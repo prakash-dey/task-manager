@@ -84,13 +84,13 @@ body{
 .priority-container{
     background-color: lightpink;
     padding: .5em;
-    height: 4rem;
+    height: 3rem;
     width: 40%;
     cursor: pointer;
 
 }
 .task-button{
-    padding: 1em;
+    padding: 0.8em;
     width: 100%;
     font-size: 1rem;
     background-color: green;
@@ -99,23 +99,23 @@ body{
 }
 .high-priority{
     background-color: red;
-    height: 3rem;
-    width: 24%;
+    height: 2rem;
+    width: 20%;
 }
 .medium-priority{
     background-color: yellow;
-    height: 3rem;
-    width: 24%;
+    height: 2rem;
+    width: 20%;
 }
 .low-priority{
     background-color: blue;
-    height: 3rem;
-    width: 24%;
+    height: 2rem;
+    width: 20%;
 }
 .no-priority{
     background-color: black;
-    height: 3rem;
-    width: 24%;
+    height: 2rem;
+    width: 20%;
 }
 .priority-container>*{
     margin-left: 0.5em;
