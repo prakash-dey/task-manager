@@ -1,7 +1,7 @@
 let taskBtn = document.querySelector(".task-button");
 let modalCont = document.querySelector(".task-modal");
 let cancelBtn = document.querySelector(".cancel-btn");
-let priorityColor = document.querySelector(".priority-color");
+let priorityColor = document.querySelectorAll(".priority-color");
 
 
 
@@ -22,6 +22,17 @@ cancelBtn.addEventListener("click",(e)=>{
 })
 
 // Select priority
-priorityColor.addEventListener("click",(e)=>{
-    console.log(e);
-})
+priorityColor.forEach(element => {
+    // priorityColor.forEach(element)
+
+    element.addEventListener("click",(e)=>{
+        priorityColor.forEach(em=>{
+            console.log("remove called");
+            em.target.classList.add("active");
+            em.target.classList.remove("active");
+
+        })
+        e.target.classList.add("active");
+    })    
+});
+
