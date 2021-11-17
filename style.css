@@ -130,6 +130,7 @@ body{
     position: absolute;
     top: calc((100vh - var(--modal-height))/2);
     left: calc((100vw - var(--modal-width))/2);
+    display: none;
 }
 .text-area{
     height: 100%;
