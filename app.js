@@ -45,11 +45,22 @@ priorityColor.forEach((element,idx) => {
 // ==========================Create tasks=======================//
 doneBtn.addEventListener("click", (e) =>{
     createTask(selectPriority,textArea.value);
+    setModalDefault()
+    
+
+})
+
+function setModalDefault(){
     modalCont.style.display = "none";
     textArea.value="";
     selectPriority=priority[priority.length-1];
+    priorityColor.forEach(em => {
+        em.classList.remove("active");
 
-})
+    })
+        
+    priorityColor[priorityColor.length-1].classList.add("active");
+}
 
 function createTask(selectPriority,task) {
     // console.log("CREATE CALLED");
