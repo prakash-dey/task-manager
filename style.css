@@ -74,7 +74,18 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-
+.high{
+    background-color: red;
+}
+.medium{
+    background-color: yellow;
+}
+.low{
+    background-color: blue;
+}
+.no-priority{
+    background-color: black;
+}
 /* ============header=================== */
 
 .header{
@@ -97,23 +108,7 @@ body{
     border: none;
     cursor: pointer;
 }
-.high-priority{
-    background-color: red;
-    height: 2rem;
-    width: 20%;
-}
-.medium-priority{
-    background-color: yellow;
-    height: 2rem;
-    width: 20%;
-}
-.low-priority{
-    background-color: blue;
-    height: 2rem;
-    width: 20%;
-}
-.no-priority{
-    background-color: black;
+.priority-color-small{
     height: 2rem;
     width: 20%;
 }
@@ -156,23 +151,7 @@ body{
     cursor: pointer;
 
 }
-.high-priority-small{
-    background-color: red;
-    height: 15%;
-    width: 50%;
-}
-.medium-priority-small{
-    background-color: yellow;
-    height: 15%;
-    width: 50%;
-}
-.low-priority-small{
-    background-color: blue;
-    height: 15%;
-    width: 50%;
-}
-.no-priority-small{
-    background-color: black;
+.priority-color-big{
     height: 15%;
     width: 50%;
 }
@@ -207,10 +186,10 @@ body{
 .task-item{
     height: 12rem;
     width: 30%;
-    background-color: lightblue;
+    background-color: rgb(52, 115, 136);
+    
 }
-.priority-color-task{
-    background-color: red;
+.priority-task{
     height: 10%;
     text-align: center;
 }
@@ -218,6 +197,4 @@ body{
     font-size: 1.2rem;
     text-align: center;
     padding: .5em;
-
-
 }

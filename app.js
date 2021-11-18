@@ -2,13 +2,14 @@
 let taskBtn = document.querySelector(".task-button");
 let modalCont = document.querySelector(".task-modal");
 let cancelBtn = document.querySelector(".cancel-btn");
-let priorityColor = document.querySelectorAll(".priority-color");
+let priorityColor = document.querySelectorAll(".priority-color-big");
 let doneBtn = document.querySelector(".done-btn");
 let mainCont = document.querySelector(".task-cont");
 let textArea = document.querySelector(".text-area");
-let colors = ['red','yellow','blue','black'];
-let selectColor = colors[3];
-console.log(selectColor);
+let priority = ['high','medium','low','no-priority'];
+let selectPriority=priority[priority.length-1];
+
+// console.log(selectColor);
 
 
 
@@ -35,7 +36,7 @@ priorityColor.forEach((element,idx) => {
             em.classList.remove("active");
 
         })
-        selectColor=colors[idx];
+        selectPriority=priority[idx];
         e.target.classList.add("active");
 
     })
@@ -43,20 +44,24 @@ priorityColor.forEach((element,idx) => {
 
 // ==========================Create tasks=======================//
 doneBtn.addEventListener("click", (e) =>{
-    createTask(selectColor,textArea.value);
+    createTask(selectPriority,textArea.value);
     modalCont.style.display = "none";
+    textArea.value="";
+    selectPriority=priority[priority.length-1];
 
 })
 
-function createTask(selectColor,task) {
+function createTask(selectPriority,task) {
+    // console.log("CREATE CALLED");
+    // console.log(task);
+    // console.log(selectPriority);
+
     let taskCont = document.createElement("div");
     taskCont.setAttribute("class", "task-item");
-    taskCont.innerHTML = `<div class="priority-color-task">
+    taskCont.innerHTML = `<div class="priority-task ${selectPriority}">
                             </div>
                             <div class="task">
                                 ${task}
                             </div>`;
-    let priorityColor = document.querySelectorAll(".priority-color-task");
-    // priorityColor.style.backgroundColor = "black";
-    console.log(priorityColor);
+  mainCont.appendChild(taskCont);
 }
