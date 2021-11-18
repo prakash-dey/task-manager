@@ -131,6 +131,7 @@ body{
     top: calc((100vh - var(--modal-height))/2);
     left: calc((100vw - var(--modal-width))/2);
     display: none;
+    z-index: 1;
 }
 .text-area{
     height: 100%;
@@ -193,4 +194,30 @@ body{
     background-color: green;
     border: none;
     cursor: pointer;
+}
+
+/* ===================Tasks================= */
+.task-cont{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 0;
+    gap: 2rem;
+}
+
+.task-item{
+    height: 12rem;
+    width: 30%;
+    background-color: lightblue;
+}
+.priority-color-task{
+    background-color: red;
+    height: 10%;
+    text-align: center;
+}
+.task{
+    font-size: 1.2rem;
+    text-align: center;
+    padding: .5em;
+
+
 }
