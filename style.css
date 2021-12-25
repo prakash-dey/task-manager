@@ -95,7 +95,9 @@ body{
 .header{
     background-color: lightblue;
     padding: .5em 0;
+    position: sticky;
 }
+
 .priority-container{
     background-color: lightpink;
     padding: .5em;
@@ -120,7 +122,11 @@ body{
     margin-left: 0.5em;
     border-radius: 8px;
 }
-
+.complete{
+    background-color: lightcyan;
+    text-align: center;
+    line-height: 2rem;
+}
 
 /* ==================modal=============== */
 .task-modal{

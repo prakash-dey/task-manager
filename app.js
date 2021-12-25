@@ -1,13 +1,15 @@
 
 
 // =====Selectors======
-let taskBtn = document.querySelector(".task-button");
-let modalCont = document.querySelector(".task-modal");
-let cancelBtn = document.querySelector(".cancel-btn");
-let priorityColor = document.querySelectorAll(".priority-color-big");
-let doneBtn = document.querySelector(".done-btn");
-let mainCont = document.querySelector(".task-cont");
-let textArea = document.querySelector(".text-area");
+const taskBtn = document.querySelector(".task-button");
+const modalCont = document.querySelector(".task-modal");
+const cancelBtn = document.querySelector(".cancel-btn");
+const priorityColor = document.querySelectorAll(".priority-color-big");
+const doneBtn = document.querySelector(".done-btn");
+const mainCont = document.querySelector(".task-cont");
+const textArea = document.querySelector(".text-area");
+const priorityContainer = document.querySelector(".priority-container");
+const taskItem = document.querySelectorAll(".task-item");
 
 
 
@@ -18,6 +20,7 @@ let priority = ['high','medium','low','no-priority'];
 let selectPriority=priority[priority.length-1];
 let lockStatus = true;
 let contentEdit = false;
+let taskArr = [];
 // ===========================Modal======================//
 taskBtn.addEventListener("click", (e) => {
     // Display modal
@@ -66,11 +69,7 @@ function setModalDefault(){
     priorityColor[priorityColor.length-1].classList.add("active");
 }
 
-function createTask(selectPriority,task) {
-    // console.log("CREATE CALLED");
-    // console.log(task);
-    // console.log(selectPriority);
-
+function createTask(selectPriority,task,newTask = false) {
     let taskCont = document.createElement("div");
     taskCont.setAttribute("class", "task-item");
     taskCont.innerHTML = `
@@ -91,6 +90,9 @@ function createTask(selectPriority,task) {
                                 <div class="lock">
                                     <i class="fas fa-lock lock-icon"></i>
                                 </div>`;
+    if(newTask){
+        taskArr.push({selectPriority,task});
+    }
   mainCont.appendChild(taskCont);
 }
 
@@ -161,4 +163,18 @@ mainCont.addEventListener('click',(e)=>{
         e.target.parentElement.parentElement.children[0].classList.add(priority[colorIndex+1]);
         e.target.classList.add(priority[colorIndex+1]);
     }
+})
+
+//=============================== Sorting by color========================
+priorityContainer.addEventListener('click',(e)=>{
+    if(e.target.classList.contains('high')){
+       let highTasks = mainCont.querySelectorAll(".high");
+    }
+    console.log(taskItem.length)
+    //removing the tickets first
+         for(let i=0; i<(taskItem.length);i++) {
+             console.log(i);
+             taskItem[i].remove();
+         } 
+
 })
